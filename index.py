@@ -46,17 +46,17 @@ app.layout = html.Div(
                 ),
                 dbc.Row(
                     children=[
-                        dbc.NavLink("Home", href=app.get_relative_path("/")),
-                        dbc.NavLink("Seasons", href=app.get_relative_path("/seasons")),
-                        dbc.NavLink("Drivers", href=app.get_relative_path("/drivers")),
-                        dbc.NavLink(
+                        dbc.Col(dbc.NavLink("Home", href=app.get_relative_path("/")), width=2),
+                        dbc.Col(dbc.NavLink("Seasons", href=app.get_relative_path("/seasons")), width=2),
+                        dbc.Col(dbc.NavLink("Drivers", href=app.get_relative_path("/drivers")), width=2),
+                        dbc.Col(dbc.NavLink(
                             "Constructors", href=app.get_relative_path("/constructors")
-                        ),
-                        dbc.NavLink(
+                        ), width=2),
+                        dbc.Col(dbc.NavLink(
                             "Circuits", href=app.get_relative_path("/circuits")
-                        ),
+                        ), width=2),
                     ],
-                    style={"paddingLeft": "480px"},
+                    style={"paddingLeft": "240px"},
                 ),
             ]
         ),
