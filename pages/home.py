@@ -1,8 +1,9 @@
+from dash import dcc, html, dash_table
 import dash
-import dash_core_components as dcc
-import dash_html_components as html
+#import dash_core_components as dcc
+#import dash_html_components as html
 import dash_bootstrap_components as dbc
-import dash_table
+#import dash_table
 from dash.exceptions import PreventUpdate
 import pandas as pd
 import plotly.graph_objs as go
@@ -15,7 +16,7 @@ from bs4 import BeautifulSoup
 import re
 from urllib.request import urlopen
 import sqlite3
-import dash_twitter_widget
+#import dash_twitter_widget
 
 from app import app
 from data_reader import *
@@ -115,7 +116,7 @@ def layout():
         ),
         html.Div(
             children=[
-                dbc.CardDeck(
+                dbc.CardGroup(
                     [
                         dbc.Card(
                             children=[
@@ -183,9 +184,9 @@ def layout():
                         ),
                         dbc.Card(
                             children=[
-                                dash_twitter_widget.DashTwitterWidget(
-                                    id="input", value="SkySportsF1"
-                                )
+                                #dash_twitter_widget.DashTwitterWidget(
+                                    #id="input", value="SkySportsF1"
+                                
                             ]
                         ),
                     ]

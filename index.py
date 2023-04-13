@@ -1,13 +1,14 @@
 import dash
-import dash_core_components as dcc
+from dash import dcc, html, Input, Output, State
+#import dash_core_components as dcc
 import dash_bootstrap_components as dbc
-import dash_html_components as html
+#import dash_html_components as html
 from dash.exceptions import PreventUpdate
 import pandas as pd
 import plotly.graph_objs as go
 import os
 import pandas as pd
-from dash.dependencies import Input, Output, State
+#from dash.dependencies import Input, Output, State
 
 
 from app import app
@@ -37,7 +38,7 @@ app.layout = html.Div(
                                 )
                             ),
                         ],
-                        no_gutters=True,
+                        #no_gutters=True,
                         className="ml-auto flex-nowrap mt-3 mt-md-0",
                         align="center",
                     ),
